@@ -1,0 +1,13 @@
+{
+  "name": "socialdesk-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SocialDesk - Multi-Tenant Agency Social Media Management Platform",
+  "scripts": {
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "share:frontend": "npx ngrok http 5173",
+    "share:backend": "npx ngrok http 5000",
+    "share": "npx ngrok http 5173"
+  }
+}

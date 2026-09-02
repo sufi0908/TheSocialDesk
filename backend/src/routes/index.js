@@ -1,0 +1,52 @@
+const express = require('express');
+const authRoutes = require('./authRoutes');
+const userRoutes = require('./userRoutes');
+const superadminRoutes = require('./superadminRoutes');
+const workspaceRoutes = require('./workspaceRoutes');
+const dashboardRoutes = require('./dashboardRoutes');
+const clientAssignmentRoutes = require('./clientAssignmentRoutes');
+const projectRoutes = require('./projectRoutes');
+const taskRoutes = require('./taskRoutes');
+const contentRoutes = require('./contentRoutes');
+const commentRoutes = require('./commentRoutes');
+const calendarRoutes = require('./calendarRoutes');
+const assetRoutes = require('./assetRoutes');
+const brandKitRoutes = require('./brandKitRoutes');
+const notificationRoutes = require('./notificationRoutes');
+const activityRoutes = require('./activityRoutes');
+const searchRoutes = require('./searchRoutes');
+const testRbacRoutes = require('./testRbacRoutes');
+const todoRoutes = require('./todoRoutes');
+const revisionRoutes = require('./revisionRoutes');
+const chatRoutes = require('./chatRoutes');
+const reportRoutes = require('./reportRoutes');
+
+const router = express.Router();
+
+// Mount API Modules
+router.use('/auth', authRoutes);
+router.use('/users', userRoutes);
+router.use('/superadmin', superadminRoutes);
+router.use('/dashboard', dashboardRoutes);
+router.use('/workspace', workspaceRoutes);
+router.use('/workspaces', workspaceRoutes);
+router.use('/clients', clientAssignmentRoutes);
+router.use('/clients/:clientId/brand-kit', brandKitRoutes);
+router.use('/brand-kits/:clientId', brandKitRoutes);
+router.use('/projects', projectRoutes);
+router.use('/tasks', taskRoutes);
+router.use('/todos', todoRoutes);
+router.use('/revisions', revisionRoutes);
+router.use('/chat', chatRoutes);
+router.use('/content', contentRoutes);
+router.use('/comments', commentRoutes);
+router.use('/calendar', calendarRoutes);
+router.use('/assets', assetRoutes);
+router.use('/notifications', notificationRoutes);
+router.use('/activity', activityRoutes);
+router.use('/activity-log', activityRoutes);
+router.use('/search', searchRoutes);
+router.use('/reports', reportRoutes);
+router.use('/test', testRbacRoutes);
+
+module.exports = router;
